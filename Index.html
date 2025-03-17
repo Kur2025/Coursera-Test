@@ -5,6 +5,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Module 2 Coding Assignment</title>
     <link rel="stylesheet" href="styles.css">
+    <style> * {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.section {
+    position: relative;
+    border: 1px solid black;
+    padding: 20px;
+    padding-top: 50px; /* Prevent text overlap with title */
+    margin: 10px;
+}
+
+.title {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: lightblue;
+    padding: 10px;
+    color: black;
+}
+
+.section-one {
+    background-color: lightcoral;
+}
+
+.section-two {
+    background-color: lightgreen;
+}
+
+.section-three {
+    background-color: lightgoldenrodyellow;
+}
+
+/* Media Queries */
+@media (min-width: 992px) {
+    .section {
+        width: 30%;
+        margin: 1%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .section {
+        width: 48%;
+        margin: 1%;
+    }
+    .section-three {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .section {
+        width: 100%;
+        margin: 5px 0;
+    }
+}</style>
 </head>
 <body>
     <header>
