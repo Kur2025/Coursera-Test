@@ -4,84 +4,87 @@
     <meta charset="UTF-8">  
     <meta name="viewport" content="width=device-width, initial-scale=1.0">  
     <title>Module 2 Coding Assignment</title> 
-    <Style> * {  
-    box-sizing: border-box;  
-}  
+    <Style> <style>
+    * {
+      box-sizing: border-box;
+    }
 
-body {  
-    font-family: Arial, sans-serif;  
-    margin: 0;  
-    padding: 0;  
-}  
+    body {
+      font-family: Arial, sans-serif;
+    }
 
-header {  
-    text-align: center;  
-    margin: 20px 0;  
-}  
+    .header {
+      text-align: center;
+      padding: 20px;
+    }
 
-.Row {  
-    display: flex;  
-    flex-wrap: wrap;  
-}  
+    .container {
+      width: 100%;
+      margin: 0 auto;
+    }
 
-.section {  
-    border: 1px solid black;  
-    padding: 30px;  
-    margin: 10px;  
-}  
+    .section {
+      border: 1px solid black;
+      background-color: #f1f1f1;
+      padding: 20px;
+      margin-bottom: 20px;
+      position: relative;
+    }
 
-.title {  
-    position: relative;  
-    top: 0;  
-    right: 0;  
-    background-color: lightblue; /* Change to your preferred color */  
-    padding: 10px;  
-    color: black; /* Change text color for readability */  
-}  
+    .section-title {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-color: #ffcc00;
+      padding: 5px 15px;
+      border-left: 1px solid black;
+      border-bottom: 1px solid black;
+      font-weight: bold;
+    }
 
-.section-one {  
-    background-color: lightcoral;  
-}  
+    /* Desktop */
+    @media (min-width: 992px) {
+      .col-lg-4 {
+        float: left;
+        width: 33.33%;
+      }
+    }
 
-.section-two {  
-    background-color: lightgreen;  
-}  
+    /* Tablet */
+    @media (min-width: 768px) and (max-width: 991px) {
+      .col-md-6 {
+        float: left;
+        width: 50%;
+      }
+      .col-md-12 {
+        float: left;
+        width: 100%;
+      }
+    }
 
-.section-three {  
-    background-color: lightgoldenrodyellow;  
-}  
+    /* Mobile */
+    @media (max-width: 767px) {
+      .col-sm-12 {
+        float: left;
+        width: 100%;
+      }
+    }
 
-/* Media Queries */  
-@media (min-width: 992px) {  
-    .section {  
-        width: 30%; /* Three sections in one row */  
-        margin: 1%; /* Adding margin for spacing */  
-    }  
-}  
-
-@media (min-width: 768px) and (max-width: 991px) {  
-    .section {  
-        width: 48%; /***** First two sections in one row *****/  
-        margin: 1%; /* Adding margin for spacing */  
-    }  
-    .section-three {  
-        width: 100%; /* Third section takes full row */  
-    }  
-}  
-
-@media (max-width: 767px) {  
-    .section {  
-        width: 100%; /* Each section takes full row */  
-        margin: 5px 0; /* Vertical spacing */  
-    }  
-}   </Style>
+    /* Clearfix */
+    .row::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  </style>  </Style>
 </head>  
 <body>  
     <header>  
         <h1>My Responsive Web Page</h1>  
     </header>  
     <div class="Row">  
-        <section class="section section-one">  
+        <section class="section section-one">
+        <div class="col-lg-4 col-md-12 col-sm-12">
             <div class="title">Chicken</div>  
             <p>Chicken is the most common type of poultry in the world. Owing to the relative ease and low cost of raising chickens—in comparison to mammals such as cattle or hogs—chicken meat and chicken eggs have become prevalent in numerous cuisines.</p>  
         </section>  
@@ -92,6 +95,7 @@ header {
             <p>Beef is the culinary name for meat from cattle (Bos taurus). Beef can be prepared in various ways; cuts are often used for steak, which can be cooked to varying degrees of doneness, while trimmings are often ground or minced, as found in most hamburgers. Beef contains protein, iron, and vitamin B12. Along with other kinds of red meat, high consumption is associated with an increased risk of colorectal cancer and coronary heart disease, especially when processed. Beef has a high environmental impact, being a primary driver of deforestation with the highest greenhouse gas emissions of any agricultural product.</p>  
         </section>  
         <section class="section section-three">  
+        <div class="col-lg-4 col-md-12 col-sm-12">
             <div class="title">Sushi</div>  
             <p>is a traditional Japanese dish made with vinegared rice (鮨飯, sushi-meshi), typically seasoned with sugar and salt, and combined with a variety of ingredients (ねた, neta), such as seafood, vegetables, or meat: raw seafood is the most common, although some may be cooked.</p>  
         </section>  
