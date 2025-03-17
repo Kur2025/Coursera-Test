@@ -6,6 +6,30 @@
     <title>Module 2 Coding Assignment</title> 
      <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css"> 
+    <Style> /* Media Queries */  
+@media (min-width: 992px) {  
+    .section {  
+        width: 30%; /* Three sections in one row */  
+        margin: 1%; /* Adding margin for spacing */  
+    }  
+}  
+
+@media (min-width: 768px) and (max-width: 991px) {  
+    .section {  
+        width: 48%; /***** First two sections in one row *****/  
+        margin: 1%; /* Adding margin for spacing */  
+    }  
+    .section-three {  
+        width: 100%; /* Third section takes full row */  
+    }  
+}  
+
+@media (max-width: 767px) {  
+    .section {  
+        width: 100%; /* Each section takes full row */  
+        margin: 5px 0; /* Vertical spacing */  
+    }  
+}  </Style>
 </head>  
 <body>  
     <header>  
